@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeLeaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<title>Home</title>
+</head>
+<body>
+<h1 align="center">Page Home</h1>
+<h2  th:text=" 'Hello '  + ${frm} "></h2>
+<h2 th:text="${param2}"></h2>
+<h2 th:text="${message}"></h2>
+
+<table>
+<tr th:each="formation : ${lstFormation}">
+			<td th:text="${formation}">...</td>
+</tr>
+</table>
+
+<table>
+<tr th:each="formation : ${formations}">
+			<td th:text="${formation.idFormation} +' '"></td>
+			<td th:text="${formation.libelleFormation}+' '"></td>
+			<td th:text="${formation.nmbreHeures}+' '"></td>
+			<td th:text="${formation.language}"></td>
+</tr>
+</table>
+
+</body>
+</html>
